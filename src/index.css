@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  @apply bg-amber-50 text-amber-900 overflow-x-hidden;
+  /* Light Center -> Slightly Darker Edge */
+  background: radial-gradient(
+    circle at 50% 0%,
+    #fffbeb 0%, 
+    #faeadd 60%,
+    #edb88b 100%
+  );
+  min-height: 100vh;
+}
+
+/* Glassmorphism Utilities - Light Mode */
+.glass-panel {
+  @apply bg-white/40 backdrop-blur-md border border-amber-900/10 shadow-xl;
+}
+
+.glass-btn {
+  @apply bg-amber-500/10 hover:bg-amber-500/20 backdrop-blur-sm border border-amber-900/10 
+         text-amber-900 transition-all duration-300 hover:scale-105 active:scale-95;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #faeadd;
+}
+::-webkit-scrollbar-thumb {
+  background: #a44200;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #873408;
+}
